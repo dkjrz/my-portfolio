@@ -1,0 +1,464 @@
+/* Основные стили */
+
+body {
+  background-color: #0e0f11;
+  color: #f2f2f2;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body.light-theme {
+  background-color: #ffffff;
+  color: #0e0f11;
+}
+
+body.light-theme .bio {
+  color: #555555;
+}
+
+body.light-theme .section h2 {
+  color: #1a73e8;
+}
+
+body.light-theme .project {
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+body.light-theme .project h3 {
+  color: #333333;
+}
+
+body.light-theme .project p {
+  color: #555555;
+}
+
+body.light-theme .contact-link {
+  background-color: #e0e0e0;
+  color: #000000; /* Чёрный цвет текста и иконок */
+}
+
+body.light-theme .contact-link:hover {
+  background-color: #c0c0c0;
+  color: #1a73e8;
+}
+
+/* Иконки SVG наследуют цвет через currentColor */
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #1a1c20;
+  color: #ffffff; /* Белый текст и иконки по умолчанию */
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-link:hover {
+  background-color: #2a2c33;
+  color: #69b5ff;
+}
+
+.contact-link svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor; /* Иконка принимает цвет текста */
+  transition: color 0.3s ease;
+}
+
+body.light-theme a {
+  color: #1a73e8;
+}
+
+body.light-theme a::after {
+  background-color: #1a73e8;
+}
+
+body.light-theme a:hover,
+body.light-theme a:focus {
+  color: #155ab5;
+}
+
+header {
+  position: relative;
+  padding: 2rem;
+  text-align: center;
+}
+
+.bio {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #b0b0b0;
+}
+
+.section {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #69b5ff;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  background-color: #1a1c20;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.project:nth-child(even) {
+  flex-direction: column-reverse;
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.project h3 {
+  margin: 1rem;
+  color: #ffffff;
+}
+
+.project p {
+  margin: 0 1rem 1.5rem;
+  color: #cccccc;
+}
+
+.contacts {
+  background-color: var(--section-bg);
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text-color);
+  background-color: var(--card-bg);
+  padding: 12px 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-link img {
+  width: 24px;
+  height: 24px;
+}
+
+.contact-link:hover {
+  background-color: var(--accent);
+  color: white;
+  transform: translateY(-4px);
+}
+
+a {
+  color: #69b5ff;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #69b5ff;
+  left: 0;
+  bottom: -3px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+  border-radius: 2px;
+}
+
+a:hover,
+a:focus {
+  color: #1a73e8;
+  outline: none;
+}
+
+a:hover::after,
+a:focus::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+@media (min-width: 768px) {
+  .projects {
+    grid-template-columns: 1fr 1fr;
+  }
+  .project {
+    flex-direction: row;
+  }
+  .project:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  .project img {
+    width: 50%;
+    height: 100%;
+  }
+}
+
+#theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #69b5ff;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+#theme-toggle:hover {
+  background-color: #4a88d6;
+}
+
+/* --- Навигация --- */
+
+.navbar {
+  background-color: #1a1c20;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.7);
+}
+
+.navbar__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #69b5ff;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+.navbar__menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar__link {
+  color: #cccccc;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar__link:hover,
+.navbar__link:focus,
+.navbar__link.active {
+  color: #69b5ff;
+}
+
+.navbar__link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #69b5ff;
+  left: 0;
+  bottom: -4px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+  border-radius: 2px;
+}
+
+.navbar__link:hover::after,
+.navbar__link:focus::after,
+.navbar__link.active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Кнопка переключения темы */
+.navbar__theme-toggle {
+  background-color: #69b5ff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navbar__theme-toggle:hover {
+  background-color: #4a88d6;
+}
+
+/* Мобильное меню (кнопка гамбургера) */
+.navbar__toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.navbar__toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #69b5ff;
+  border-radius: 2px;
+}
+
+/* --- Навыки --- */
+
+#skills {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 1rem 3rem 1rem;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.skills-list li {
+  background-color: #2a2c33;
+  color: #69b5ff;
+  padding: 0.7rem 1.2rem;
+  border-radius: 20px;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(105,181,255,0.3);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: default;
+}
+
+.skills-list li:hover {
+  background-color: #69b5ff;
+  color: #1a1c20;
+}
+
+/* --- Light Theme Support --- */
+body.light-theme .navbar {
+  background-color: #f0f0f0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+body.light-theme .navbar__logo,
+body.light-theme .navbar__link {
+  color: #1a73e8;
+}
+
+body.light-theme .navbar__link.active,
+body.light-theme .navbar__link:hover,
+body.light-theme .navbar__link:focus {
+  color: #155ab5;
+}
+
+body.light-theme .navbar__theme-toggle {
+  background-color: #1a73e8;
+}
+
+body.light-theme .navbar__theme-toggle:hover {
+  background-color: #155ab5;
+}
+
+body.light-theme .skills-list li {
+  background-color: #d0e4ff;
+  color: #155ab5;
+  box-shadow: 0 2px 6px rgba(21,90,181,0.3);
+}
+
+body.light-theme .skills-list li:hover {
+  background-color: #155ab5;
+  color: #d0e4ff;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .navbar__menu {
+    display: none;
+    flex-direction: column;
+    background-color: #1a1c20;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  .navbar__menu.active {
+    display: flex;
+  }
+  .navbar__toggle {
+    display: flex;
+  }
+  .skills-list {
+    justify-content: center;
+  }
+}
+
+
+.footer {
+  background-color: var(--section-bg);
+  padding: 25px 15px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer__content p {
+  margin: 5px 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
