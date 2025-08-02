@@ -103,7 +103,7 @@ header {
 .section {
   padding: 3rem 2rem;
   max-width: 1200px;
-  min-height: 45vh;
+  min-height: 60vh;
   margin: 0 auto;
 }
 
@@ -469,3 +469,4 @@ body.light-theme .skills-list li:hover {
   color: var(--text-secondary);
   font-size: 14px;
 }
+
