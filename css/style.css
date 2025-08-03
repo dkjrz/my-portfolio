@@ -17,7 +17,38 @@ body {
 
 body.light-theme {
   background-color: #ffffff;
-  color: #0e0f11;
+  color: #f0f0f0;
+}
+
+body.light-theme .project {
+  background-color: #1E90FF;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .project h3 {
+  color: #f0f0f0;
+}
+
+body.light-theme .project p {
+  color: #f0f0f0a9;
+}
+
+body.light-theme .navbar {
+  background-color: #1E90FF;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .navbar__logo {
+  color: #ffffff;
+}
+body.light-theme .navbar__link {
+  color: #ffffff88;
+}
+
+body.light-theme .navbar__link.active,
+body.light-theme .navbar__link:hover,
+body.light-theme .navbar__link:focus {
+  color: #ffffff;
 }
 
 a {
