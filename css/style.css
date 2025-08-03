@@ -6,6 +6,10 @@
   --card-bg: #1a1c20;
 }
 
+* {
+  transition: all 0.8s ease;
+}
+
 body {
   background-color: var(--section-bg);
   color: var(--text-color);
