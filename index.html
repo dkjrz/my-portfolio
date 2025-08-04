@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dmitry D. | Portfolio</title>
-  <link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -18,7 +18,7 @@
         <a href="#skills" class="navbar__link">Навички</a>
         <a href="#contacts" class="navbar__link">Контакти</a>
       </nav>
-
+      
       <label class="switch">
         <span class="sun">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -46,6 +46,20 @@
     </div>
   </header>
 
+<section class="hero">
+  <div class="hero__content">
+    <h1>Код не спить. І я — теж.</h1>
+    <p class="typed-text">Функціонал. Анімації. Враження. Все працює — тому що я так захотів.</p>
+    <div class="hero__buttons">
+      <a href="#skills" class="hero__button">💡 Дивитися навички</a>
+      <a href="#contacts" class="hero__button ghost">📞 Зв’язатися</a>
+    </div>
+  </div>
+</section>
+
+
+
+
   <section id="about" class="section">
     <h2>Про мене</h2>
     <p class="bio">
@@ -53,51 +67,8 @@
     </p>
   </section>
 
-  <section id="projects" class="section">
-    <h2>Проєкти</h2>
-    <div class="projects">
-      <div class="project">
-        <img src="assets/images/project1.png" alt="Проєкт 1" />
-        <div>
-          <a href="https://github.com/dkjrz/sa-police-community" target="_blank" rel="noopener">
-            <h3>Сайт для ігрового співтовариства</h3>
-          </a>
-          <p>Розробка адаптивного сайту з сучасним дизайном та інтеграцією Discord і Telegram-ботів.</p>
-        </div>
-      </div>
-      <div class="project">
-        <img src="assets/images/project2.png" alt="Проєкт 2" />
-        <div>
-          <a href="https://github.com/dkjrz/telegram-school-bot" target="_blank" rel="noopener">
-            <h3>Telegram бот</h3>
-          </a>
-          <p>Розробка Telegram бота для автоматизації процесів у навчальному закладі, та інтеграція з базою даних для зберігання інформації про розклад дзвінків та уроків.</p>
-        </div>
-      </div>
-    </div>
-    <br />
-    <div class="projects">
-      <div class="project">
-        <img src="assets/images/project3.png" alt="Проєкт 3" />
-        <div>
-          <a href="https://github.com/dkjrz/first-person-shooter-ursina" target="_blank" rel="noopener">
-            <h3>Локальна гра</h3>
-          </a>
-          <p>Розробка ігор з використанням бібліотеки Ursina, включаючи графіку та анімацію персонажів та об'єктів.</p>
-        </div>
-      </div>
-      <div class="project">
-        <img src="assets/images/project4.png" alt="Проєкт 4" />
-        <div>
-          <a href="#" target="_blank" rel="noopener">
-            <h3>Адаптивна верстка</h3>
-          </a>
-          <p>Розробка адаптивної верстки для різних пристроїв з використанням Flexbox та Grid.</p>
-        </div>
-      </div>
-    </div>
-    <br />
-  </section>
+<div id="projects-placeholder"></div>
+
 
 
   <section id="skills" class="section">
@@ -113,23 +84,39 @@
   </section>
 
 
-  <section id="contacts" class="section contacts">
-    <h2>Контакти</h2>
-    <div class="contact-links">
-      <a class="contact-link" href="https://t.me/dkjrz" target="_blank" rel="noopener">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
-          <path d="M120 0C53.73 0 0 53.73 0 120s53.73 120 120 120 120-53.73 120-120S186.27 0 120 0zm52.71 79.84l-22.02 103.88c-1.66 7.34-6.02 9.17-12.18 5.71l-33.63-24.8-16.22 15.61c-1.78 1.78-3.28 3.28-6.7 3.28l2.4-33.92 61.74-55.77c2.68-2.4-.59-3.73-4.14-1.33l-76.3 48.07-32.89-10.3c-7.15-2.24-7.3-7.15 1.5-10.58l128.51-49.61c5.96-2.24 11.17 1.33 9.26 10.26z" fill="currentColor" />
+<section id="contacts" class="section contacts">
+  <h2>Контакти</h2>
+  <div class="contact-links">
+    <a class="contact-link" href="mailto:dmitry.dkjrz@gmail.com" target="_blank" rel="noopener" title="Email">
+      <div class="icon-wrapper">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M1.5 4.5h21v15h-21v-15zM3 6v12h18V6H3zm9 5l8.25-5.5H4.75L12 11z"/>
         </svg>
-        Telegram
-      </a>
-      <a class="contact-link" href="https://github.com/dkjrz" target="_blank" rel="noopener">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" fill="currentColor" />
+      </div>
+      <span class="contact-text">Email me</span>
+    </a>
+
+    <a class="contact-link" href="https://t.me/dkjrz" target="_blank" rel="noopener" title="Telegram">
+      <div class="icon-wrapper">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" fill="currentColor" aria-hidden="true">
+          <path d="M120 0C53.73 0 0 53.73 0 120s53.73 120 120 120 120-53.73 120-120S186.27 0 120 0zm52.71 79.84l-22.02 103.88c-1.66 7.34-6.02 9.17-12.18 5.71l-33.63-24.8-16.22 15.61c-1.78 1.78-3.28 3.28-6.7 3.28l2.4-33.92 61.74-55.77c2.68-2.4-.59-3.73-4.14-1.33l-76.3 48.07-32.89-10.3c-7.15-2.24-7.3-7.15 1.5-10.58l128.51-49.61c5.96-2.24 11.17 1.33 9.26 10.26z"/>
         </svg>
-        GitHub
-      </a>
-    </div>
-  </section>
+      </div>
+      <span class="contact-text">Telegram</span>
+    </a>
+
+    <a class="contact-link" href="https://github.com/dkjrz" target="_blank" rel="noopener" title="GitHub">
+      <div class="icon-wrapper">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+      </div>
+      <span class="contact-text">GitHub</span>
+    </a>
+  </div>
+</section>
+
+
   
   <footer class="footer">
   <div class="footer__content">
@@ -140,6 +127,6 @@
 
   <script src="js/script.js"></script>
   <script src="js/theme-toggle.js"></script>
-  <script src="scroll-animate.js"></script>
+  <script src="js/load-projects.js"></script>
 </body>
 </html>
